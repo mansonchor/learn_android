@@ -11,6 +11,6 @@ public class HelloWorldActivity extends Activity {
     @Override
     protected void onCreate(Bundle saveIns){
         super.onCreate(saveIns);
-        Log.d("test","ssss");
+        setContentView(R.layout.hello_world_layout);
     }
 }
