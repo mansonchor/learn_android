@@ -3,4 +3,40 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button 1"/>
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/test_img"
+        ></ImageView>
+
+    <!-- mdpi 1px=1dp -->
+    <ImageView
+        android:layout_width="208px"
+        android:layout_height="44px"
+        android:src="@drawable/test_img"
+        ></ImageView>
+
+    <!-- hdpi 1.5px=1dp -->
+    <ImageView
+        android:layout_width="312px"
+        android:layout_height="66px"
+        android:src="@drawable/test_img"
+        ></ImageView>
+    
+    <!-- xhdpi 2px=1dp -->
+    <ImageView
+        android:layout_width="516px"
+        android:layout_height="88px"
+        android:src="@drawable/test_img"
+        ></ImageView>
+
 </LinearLayout>
+
