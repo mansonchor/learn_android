@@ -1,6 +1,7 @@
 package com.example.manson.manson_test_activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -15,9 +16,10 @@ public class HelloWorldActivity extends Activity {
     @Override
     protected void onCreate(Bundle saveIns){
         super.onCreate(saveIns);
-        setContentView(R.layout.hello_world_layout);
+        //setContentView(R.layout.hello_world_layout);
+        setContentView(R.layout.drawable_scrale_test_layout);
 
-        bindEvent();
+        bindEvent(true);
     }
 
     @Override
@@ -31,7 +33,18 @@ public class HelloWorldActivity extends Activity {
         button1Obj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(HelloWorldActivity.this,"you click button 1",Toast.LENGTH_SHORT).show();
+                Toast.makeText(HelloWorldActivity.this, "you click button 1", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void bindEvent(Boolean goToWebView){
+        Button button1Obj = (Button) findViewById(R.id.go_webview_btn);
+        button1Obj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HelloWorldActivity.this, WebViewTestActivity.class);
+                startActivity(intent);
             }
         });
     }

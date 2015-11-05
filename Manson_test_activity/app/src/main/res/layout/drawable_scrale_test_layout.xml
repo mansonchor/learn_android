@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aa222222">
+
+    <Button
+        android:id="@+id/go_webview_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="go to webview"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="icon xhdpi"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mini_default_album"
+        android:layout_marginBottom="10dp"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="icon 写死大小"/>
+    <ImageView
+        android:layout_width="130px"
+        android:layout_height="130px"
+        android:src="@drawable/mini_default_album_hdpi"
+        android:layout_marginBottom="10dp"
+        ></ImageView>
+
+</LinearLayout>
+
