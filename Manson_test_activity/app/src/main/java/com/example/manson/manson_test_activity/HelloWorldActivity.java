@@ -9,15 +9,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import base.BaseActivity;
+
 /**
  * Created by Administrator on 2015/11/3.
  */
-public class HelloWorldActivity extends Activity {
+public class HelloWorldActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle saveIns){
         super.onCreate(saveIns);
         //setContentView(R.layout.hello_world_layout);
         setContentView(R.layout.hello_world_layout);
+
+        Log.d("firstActivity",this.toString());
 
         bindEvent();
     }
@@ -28,14 +32,18 @@ public class HelloWorldActivity extends Activity {
         return true;
     }
 
-    @Override
+    /*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        String data_return = data.getStringExtra("data_return");
+        switch (requestCode){
+            case 10:
+                String data_return = data.getStringExtra("data_return");
 
-        Log.d("onActivityResult", data_return);
-        Log.d("onActivityResult", Integer.toString(requestCode));
-        Log.d("onActivityResult", Integer.toString(resultCode));
-    }
+                Log.d("onActivityResult", data_return);
+                Log.d("onActivityResult", Integer.toString(requestCode));
+                Log.d("onActivityResult", Integer.toString(resultCode));
+                break;
+        }
+    }*/
 
     private void bindEvent(){
        /* Button button1Obj = (Button) findViewById(R.id.button_1);
@@ -52,8 +60,8 @@ public class HelloWorldActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(HelloWorldActivity.this, SecondActivity.class);
                 intent.putExtra("extra_data", "Hello SecondActivity");
-                startActivityForResult(intent, 10);
-                //startActivity(intent);
+                //startActivityForResult(intent, 10);
+                startActivity(intent);
             }
         });
     }

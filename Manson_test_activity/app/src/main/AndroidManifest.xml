@@ -7,7 +7,8 @@
         android:icon="@mipmap/ic_launcher" android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.example.manson.manson_test_activity.HelloWorldActivity">
+        <activity android:name="com.example.manson.manson_test_activity.HelloWorldActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" ></action>
                 <category android:name="android.intent.category.LAUNCHER"></category>

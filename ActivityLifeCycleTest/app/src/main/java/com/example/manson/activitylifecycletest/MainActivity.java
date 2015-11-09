@@ -36,6 +36,17 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        if(savedInstanceState!=null){
+            String tempData = savedInstanceState.getString("data_key");
+            Log.d(TAG, tempData);
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("data_key","something you just typed");
     }
 
     @Override
