@@ -15,6 +15,7 @@
         </activity>
 
         <activity android:name=".WebViewTestActivity"></activity>
+        <activity android:name=".SecondActivity"></activity>
     </application>
 
 </manifest>

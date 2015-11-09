@@ -17,9 +17,9 @@ public class HelloWorldActivity extends Activity {
     protected void onCreate(Bundle saveIns){
         super.onCreate(saveIns);
         //setContentView(R.layout.hello_world_layout);
-        setContentView(R.layout.text_size_test_layout);
+        setContentView(R.layout.hello_world_layout);
 
-        //bindEvent(true);
+        bindEvent();
     }
 
     @Override
@@ -28,12 +28,32 @@ public class HelloWorldActivity extends Activity {
         return true;
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        String data_return = data.getStringExtra("data_return");
+
+        Log.d("onActivityResult", data_return);
+        Log.d("onActivityResult", Integer.toString(requestCode));
+        Log.d("onActivityResult", Integer.toString(resultCode));
+    }
+
     private void bindEvent(){
-        Button button1Obj = (Button) findViewById(R.id.button_1);
+       /* Button button1Obj = (Button) findViewById(R.id.button_1);
         button1Obj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(HelloWorldActivity.this, "you click button 1", Toast.LENGTH_SHORT).show();
+            }
+        });*/
+
+        Button button1Obj = (Button) findViewById(R.id.button_1);
+        button1Obj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HelloWorldActivity.this, SecondActivity.class);
+                intent.putExtra("extra_data", "Hello SecondActivity");
+                startActivityForResult(intent, 10);
+                //startActivity(intent);
             }
         });
     }
