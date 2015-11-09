@@ -17,9 +17,9 @@ public class HelloWorldActivity extends Activity {
     protected void onCreate(Bundle saveIns){
         super.onCreate(saveIns);
         //setContentView(R.layout.hello_world_layout);
-        setContentView(R.layout.drawable_scrale_test_layout);
+        setContentView(R.layout.text_size_test_layout);
 
-        bindEvent(true);
+        //bindEvent(true);
     }
 
     @Override
